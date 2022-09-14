@@ -4,7 +4,11 @@
 :root {
     --primary: rgba(254, 44, 85, 1);
 }
-
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 html {
     font-size: 62.5%;
 }
