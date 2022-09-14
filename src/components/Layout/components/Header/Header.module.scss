@@ -1,0 +1,17 @@
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+    height: var(--defaultLayout-Header-Height);
+    width: 100%;
+    top: 0;
+    position: fixed;
+    align-items: center;
+    background: rgba(255, 255, 255, 1);
+    z-index: 1000;
+}
+.inner {
+    height: 100%;
+    width: var(--defaultLayout-Width);
+    background-color: beige;
+}

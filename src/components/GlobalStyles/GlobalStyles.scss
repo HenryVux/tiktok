@@ -3,6 +3,10 @@
 
 :root {
     --primary: rgba(254, 44, 85, 1);
+
+    // default layout
+    --defaultLayout-Header-Height: 60px;
+    --defaultLayout-Width: 1150px;
 }
 * {
     box-sizing: border-box;
