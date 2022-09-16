@@ -15,7 +15,7 @@ function Menu({ children, items = [] }) {
         <Tippy
             interactive
             // visible // bo visible thay the hover
-            delay={(0, 500)}
+            delay={[0, 500]}
             placement="bottom-end"
             render={(attrs) => (
                 <div className={cx('menu-lst')} tabIndex="-1" {...attrs}>
