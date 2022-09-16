@@ -26,7 +26,7 @@ function Button({
         ...passProps,
     };
     const classes = cx('wrapper', {
-        [classNames]: classNames,
+        [className]: className,
         primary,
         outline,
         text,

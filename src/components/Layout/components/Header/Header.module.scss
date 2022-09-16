@@ -94,6 +94,23 @@
         background-color: rgba(22, 24, 35, 0.1);
     }
 }
-
+.more-btn {
+    font-size: 2rem;
+    margin-left: 16px;
+    padding: 4px 10px;
+    background-color: transparent;
+    cursor: pointer;
+}
 .action {
+}
+
+.menu-items {
+    font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 8px 0px;
+    margin: 0px;
+    min-width: 223px;
+    list-style: none;
 }
