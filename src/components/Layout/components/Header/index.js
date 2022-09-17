@@ -27,6 +27,31 @@ const MENU_ITEMS = [
     {
         icon: <FontAwesomeIcon icon={faEarthAsia} />,
         title: 'Tiếng Việt',
+        children: {
+            title: 'Language',
+            data: [
+                {
+                    code: 'en',
+                    title: 'English',
+                    children: {
+                        title: 'Language',
+                        data: [
+                            { code: 'en', title: 'English 1' },
+                            { code: 'vn', title: 'Việt Nam 1' },
+                            { code: 'cn', title: 'China' },
+                            { code: 'jp', title: 'Japan' },
+                            { code: 'kr', title: 'Korea' },
+                            { code: 'fr', title: 'France' },
+                        ],
+                    },
+                },
+                { code: 'vn', title: 'Việt Nam' },
+                { code: 'cn', title: 'China' },
+                { code: 'jp', title: 'Japan' },
+                { code: 'kr', title: 'Korea' },
+                { code: 'fr', title: 'France' },
+            ],
+        },
     },
     {
         icon: <FontAwesomeIcon icon={faCircleQuestion} />,
@@ -46,6 +71,11 @@ function Header() {
             setSearchResult([]);
         }, 3000);
     }, []);
+
+    const handleMenuChange = (menuItem) => {
+        console.log(menuItem);
+    };
+
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
@@ -88,7 +118,7 @@ function Header() {
                     <Button primary leftIcon={<FontAwesomeIcon icon={faSignIn} />}>
                         Log in
                     </Button>
-                    <Menu items={MENU_ITEMS}>
+                    <Menu items={MENU_ITEMS} onChange={handleMenuChange}>
                         <button className={cx('more-btn')}>
                             <FontAwesomeIcon icon={faEllipsisVertical} />
                         </button>
