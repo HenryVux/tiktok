@@ -14,7 +14,7 @@ function Menu({ children, items = [], onChange = defaultFn }) {
     const [history, setHistory] = useState([{ data: items }]);
     // lay ptu cuoi cua mang
     const current = history[history.length - 1];
-    console.log('current:', current);
+    // console.log('current:', current);
 
     const renderItems = () => {
         // return items.map((item, index) => <MenuItems key={index} data={item} />);
@@ -42,6 +42,7 @@ function Menu({ children, items = [], onChange = defaultFn }) {
             interactive
             // visible // bo visible thay the hover
             delay={[0, 500]}
+            offset={[12, 8]}
             placement="bottom-end"
             render={(attrs) => (
                 <div className={cx('menu-lst')} tabIndex="-1" {...attrs}>

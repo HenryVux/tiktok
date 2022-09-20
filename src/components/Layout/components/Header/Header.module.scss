@@ -101,16 +101,33 @@
     background-color: transparent;
     cursor: pointer;
 }
-.action {
+.actions {
+    display: flex;
+    align-items: center;
 }
 
 .menu-items {
-    font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+    font-family: Arial, Tahoma, sans-serif;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 22px;
     padding: 8px 0px;
     margin: 0px;
     min-width: 223px;
     list-style: none;
+}
+.action-btn {
+    font-size: 2.2rem;
+    color: #161823;
+    padding: 4px 12px;
+    cursor: pointer;
+    background-color: transparent;
+}
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 12px;
+    cursor: pointer;
 }
