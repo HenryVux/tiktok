@@ -34,7 +34,7 @@ const MENU_ITEMS = [
                     code: 'en',
                     title: 'English',
                     children: {
-                        title: 'Language',
+                        title: 'English 1',
                         data: [
                             { code: 'en', title: 'English 1' },
                             { code: 'vn', title: 'Việt Nam 1' },
@@ -73,7 +73,7 @@ function Header() {
     }, []);
 
     const handleMenuChange = (menuItem) => {
-        console.log(menuItem);
+        // console.log(menuItem);
     };
 
     return (

@@ -14,7 +14,7 @@ function Menu({ children, items = [], onChange = defaultFn }) {
     const [history, setHistory] = useState([{ data: items }]);
     // lay ptu cuoi cua mang
     const current = history[history.length - 1];
-    // console.log(current);
+    console.log('current:', current);
 
     const renderItems = () => {
         // return items.map((item, index) => <MenuItems key={index} data={item} />);
@@ -48,7 +48,7 @@ function Menu({ children, items = [], onChange = defaultFn }) {
                     <PopperWrapper className={cx('menu-popper')}>
                         {history.length > 1 && (
                             <Header
-                                title="Language"
+                                title={current.title} //"Language"
                                 onBack={() => {
                                     setHistory((prev) => prev.slice(0, prev.length - 1));
                                 }}
@@ -58,6 +58,8 @@ function Menu({ children, items = [], onChange = defaultFn }) {
                     </PopperWrapper>
                 </div>
             )}
+            // reset menu
+            onHide={() => setHistory((prev) => prev.slice(0, 1))}
         >
             {children}
         </Tippy>
