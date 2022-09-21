@@ -29,7 +29,8 @@ import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/Layout/components/AccountItem';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
-import { faBitcoin } from '@fortawesome/free-brands-svg-icons';
+import { UploadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
@@ -152,7 +153,8 @@ function Header() {
                             {/* <Tippy trigger="click" content="upload video" placement="bottom"> */}
                             <Tippy delay={[0, 200]} content="upload video" placement="bottom">
                                 <Button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    {/* <FontAwesomeIcon icon={faCloudUpload} /> */}
+                                    <UploadIcon />
                                 </Button>
                             </Tippy>
                             {/* <Button className={cx('action-btn')}>
@@ -171,10 +173,12 @@ function Header() {
                     )}
                     <Menu items={currentUser ? USER_MENU : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
-                                src="https://p16-sign-sg.tiktokcdn.com/aweme/720x720/tiktok-obj/6963149319855669250.jpeg?x-expires=1663833600&x-signature=NVoEQTt5oIQM91zfUc36pLCJSk0%3D"
+                            // components Image
+                            <Image
+                                src="hps://p16-sign-sg.tiktokcdn.com/aweme/720x720/tiktok-obj/6963149319855669250.jpeg?x-expires=1663833600&x-signature=NVoEQTt5oIQM91zfUc36pLCJSk0%3D"
                                 alt="Nguyen Van A"
                                 className={cx('user-avatar')}
+                                imgFallBack="https://fullstack.edu.vn/static/media/f8-icon.18cd71cfcfa33566a22b.png"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
