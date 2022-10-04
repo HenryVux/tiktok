@@ -8,7 +8,8 @@ import { useDebounce } from '~/hooks';
 import styles from './Search.module.scss';
 //
 import { useState, useEffect, useRef } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
+import * as request from '~/utils/request';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const cx = classNames.bind(styles);
@@ -32,18 +33,22 @@ function Search() {
             return;
         }
         setLoading(true);
-        axios
-            .get(`https://tiktok.fullstack.edu.vn/api/users/search`, {
-                params: { q: debounced, type: 'less' },
-            })
-            .then((res) => {
-                console.log('res:', res.data.data);
-                setSearchResult(res.data.data);
+
+        const handleFetchApi = async () => {
+            try {
+                const res = await request.get('users/search', {
+                    params: { q: debounced, type: 'less' },
+                });
+
+                console.log('res:', res.data);
+                setSearchResult(res.data);
                 setLoading(false);
-            })
-            .catch(() => {
+            } catch (error) {
                 setLoading(false);
-            });
+            }
+        };
+
+        handleFetchApi();
     }, [debounced]);
 
     const handleClear = () => {
