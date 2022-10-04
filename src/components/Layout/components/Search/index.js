@@ -8,8 +8,8 @@ import { useDebounce } from '~/hooks';
 import styles from './Search.module.scss';
 //
 import { useState, useEffect, useRef } from 'react';
-// import axios from 'axios';
-import * as request from '~/utils/request';
+
+import * as searchServices from '~/apiServices/searchServices';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const cx = classNames.bind(styles);
@@ -35,17 +35,10 @@ function Search() {
         setLoading(true);
 
         const handleFetchApi = async () => {
-            try {
-                const res = await request.get('users/search', {
-                    params: { q: debounced, type: 'less' },
-                });
-
-                console.log('res:', res.data);
-                setSearchResult(res.data);
-                setLoading(false);
-            } catch (error) {
-                setLoading(false);
-            }
+            setLoading(true);
+            const result = await searchServices.handleSearch(debounced);
+            setSearchResult(result);
+            setLoading(false);
         };
 
         handleFetchApi();
