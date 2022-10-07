@@ -10,7 +10,7 @@ import Header from './Header';
 const cx = classNames.bind(styles);
 const defaultFn = () => {};
 
-function Menu({ children, items = [], onChange = defaultFn }) {
+function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn }) {
     const [history, setHistory] = useState([{ data: items }]);
     // lay ptu cuoi cua mang
     const current = history[history.length - 1];
@@ -43,6 +43,7 @@ function Menu({ children, items = [], onChange = defaultFn }) {
             // visible // bo visible thay the hover
             delay={[0, 500]}
             offset={[12, 8]}
+            hideOnClick={hideOnClick}
             placement="bottom-end"
             render={(attrs) => (
                 <div className={cx('menu-lst')} tabIndex="-1" {...attrs}>
