@@ -7,11 +7,13 @@
     display: flex;
     justify-content: space-around;
     box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
-    height: var(--defaultLayout-Header-Height);
+    height: var(--defaultLayout-Header-Height, 60px);
     width: 100%;
-    top: 0;
     position: fixed;
+    top: 0;
+    left: 0;
     align-items: center;
+    background-color: var(--white);
     z-index: 1000;
 }
 .inner {

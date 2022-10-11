@@ -38,33 +38,35 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
     };
 
     return (
-        <Tippy
-            interactive
-            // visible // bo visible thay the hover
-            delay={[0, 500]}
-            offset={[12, 8]}
-            hideOnClick={hideOnClick}
-            placement="bottom-end"
-            render={(attrs) => (
-                <div className={cx('menu-lst')} tabIndex="-1" {...attrs}>
-                    <PopperWrapper className={cx('menu-popper')}>
-                        {history.length > 1 && (
-                            <Header
-                                title={current.title} //"Language"
-                                onBack={() => {
-                                    setHistory((prev) => prev.slice(0, prev.length - 1));
-                                }}
-                            />
-                        )}
-                        {renderItems()}
-                    </PopperWrapper>
-                </div>
-            )}
-            // reset menu
-            onHide={() => setHistory((prev) => prev.slice(0, 1))}
-        >
-            {children}
-        </Tippy>
+        <div>
+            <Tippy
+                interactive
+                visible // bo visible thay the hover
+                delay={[0, 500]}
+                offset={[12, 8]}
+                hideOnClick={hideOnClick}
+                placement="bottom-end"
+                render={(attrs) => (
+                    <div className={cx('menu-lst')} tabIndex="-1" {...attrs}>
+                        <PopperWrapper className={cx('menu-popper')}>
+                            {history.length > 1 && (
+                                <Header
+                                    title={current.title} //"Language"
+                                    onBack={() => {
+                                        setHistory((prev) => prev.slice(0, prev.length - 1));
+                                    }}
+                                />
+                            )}
+                            <div className={cx('menu-body')}>{renderItems()}</div>
+                        </PopperWrapper>
+                    </div>
+                )}
+                // reset menu
+                onHide={() => setHistory((prev) => prev.slice(0, 1))}
+            >
+                {children}
+            </Tippy>
+        </div>
     );
 }
 
