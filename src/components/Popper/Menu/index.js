@@ -41,7 +41,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
         <div>
             <Tippy
                 interactive
-                visible // bo visible thay the hover
+                // visible // bo visible thay the hover
                 delay={[0, 500]}
                 offset={[12, 8]}
                 hideOnClick={hideOnClick}

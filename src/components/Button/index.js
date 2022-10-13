@@ -2,6 +2,8 @@ import classNames from 'classnames/bind';
 import styles from './Button.module.scss';
 import { Link } from 'react-router-dom';
 import { forwardRef } from 'react';
+import PropTypes from 'prop-types';
+
 const cx = classNames.bind(styles);
 
 function Button({
@@ -59,4 +61,9 @@ function Button({
         </Compo>
     );
 }
+
+Button.propTypes = {
+    children: PropTypes.node.isRequired,
+};
+
 export default forwardRef(Button);
