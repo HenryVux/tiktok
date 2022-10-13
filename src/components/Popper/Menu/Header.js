@@ -7,6 +7,7 @@ import styles from './Menu.module.scss';
 const cx = classNames.bind(styles);
 
 function Header({ title, onBack }) {
+    // console.log('title:', title);
     return (
         <header className={cx('header')}>
             <button className={cx('back-btn')} onClick={onBack}>
