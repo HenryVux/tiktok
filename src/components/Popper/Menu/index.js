@@ -6,6 +6,7 @@ import styles from './Menu.module.scss';
 
 import MenuItems from './MenuItems';
 import Header from './Header';
+import PropTypes from 'prop-types';
 
 const cx = classNames.bind(styles);
 const defaultFn = () => {};
@@ -69,5 +70,12 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
         </div>
     );
 }
+
+Menu.propTypes = {
+    children: PropTypes.node.isRequired,
+    items: PropTypes.array,
+    hideOnClick: PropTypes.bool,
+    onChange: PropTypes.func,
+};
 
 export default Menu;
