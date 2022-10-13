@@ -24,7 +24,7 @@ import { UploadIcon, MessageIcon, InboxIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from '../Search';
 import { Link } from 'react-router-dom';
-import routesConfig from '~/config/routes';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
@@ -71,7 +71,7 @@ const MENU_ITEMS = [
                 { code: 'x1', title: 'Türkçe (Türkiye)' },
                 { code: 'x1', title: 'Українська (Україна)' },
                 { code: 'x1', title: 'اردو' },
-                { code: 'x1', title: 'Tiếng Việt (Việt Nam)' },
+                { code: 'vn', title: 'Tiếng Việt (Việt Nam)' },
                 { code: 'x1', title: '简体中文' },
                 { code: 'x1', title: '繁體中文' },
             ],
@@ -89,7 +89,6 @@ const MENU_ITEMS = [
 ];
 function Header() {
     // console.log(images.logo);
-
     const handleMenuChange = (menuItem) => {
         // console.log(menuItem);
     };
@@ -123,12 +122,11 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <Link to={routesConfig.home} className={cx('logo-link')}>
+                    <Link to={config.routes.home} className={cx('logo-link')}>
                         <img src={images.logo} alt="tiktok logo" />
                     </Link>
                 </div>
 
-                {/* Search component */}
                 <Search />
 
                 <div className={cx('actions')}>
