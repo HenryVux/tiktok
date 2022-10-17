@@ -158,7 +158,7 @@ function Header() {
                             <Button text leftIcon={<FontAwesomeIcon icon={faUpload} />}>
                                 Upload
                             </Button>
-                            <Button primary leftIcon={<FontAwesomeIcon icon={faSignIn} />}>
+                            <Button primary leftIcon={<FontAwesomeIcon icon={faSignIn} />} to="/">
                                 Log in
                             </Button>
                         </>
