@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import './components/Button';
+import './components/Button/Button';
 // import Button from './components/Button';
 import { publicRoutes } from '~/routes';
-import { DefaultLayout } from '~/layouts/';
+import { DefaultLayout } from '~/layouts';
 import { Fragment } from 'react';
 
 function App() {
