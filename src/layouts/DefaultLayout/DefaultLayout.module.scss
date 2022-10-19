@@ -5,8 +5,8 @@
     margin-top: 60px;
 }
 .container {
-    width: 1150px;
-    min-height: var(--defaultLayout-Width);
+    width: var(--defaultLayout-Width);
+    max-width: 100%;
     background-color: azure;
     display: flex;
 }
