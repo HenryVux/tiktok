@@ -1,0 +1,54 @@
+.wrapper {
+    width: 320px;
+    padding: 16px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.user-follow {
+    min-width: 106px;
+    min-height: 28px;
+    font-size: 1.6rem;
+    line-height: 14px;
+    font-weight: 600;
+}
+.user-wrapper {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 22px;
+    color: #161823;
+}
+.user-check {
+    font-size: 1.4rem;
+    color: var(--check);
+    margin-left: 4px;
+}
+.user-desc {
+    font-size: 1.4rem;
+    font-weight: 600;
+    opacity: #161823bf;
+    line-height: 20px;
+}
+.user-stat {
+    margin-top: 8px;
+}
+.user-text {
+    font-weight: 700;
+    margin-right: 7px;
+    font-size: 1.7rem;
+    line-height: 20px;
+}
+.user-desc {
+    margin-right: 12px;
+}
