@@ -4,16 +4,6 @@
     position: relative;
     font-weight: 600;
     color: rgba(22, 24, 35, 0.75);
-
-    ::before {
-        content: '';
-        background: rgba(233, 231, 231, 0.911);
-        height: 1px;
-        position: absolute;
-        top: 0px;
-        left: 8px;
-        right: 8px;
-    }
 }
 .label {
     padding: 0 8px;

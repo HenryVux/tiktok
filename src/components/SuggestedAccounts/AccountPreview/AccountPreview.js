@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
-import { Wrapper as PopperWrapper } from '~/components/Popper';
+import { container as PopperContainer } from '~/components/Popper';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './AccountPreview.module.scss';
@@ -11,8 +11,8 @@ const cx = classNames.bind(styles);
 function AccountPreview({ ...props }) {
     return (
         <div tabIndex="-1" {...props}>
-            <PopperWrapper>
-                <div className={cx('wrapper')}>
+            <PopperContainer>
+                <div className={cx('container')}>
                     <header className={cx('header')}>
                         <img
                             src="https://fullstack.edu.vn/static/media/f8-icon.18cd71cfcfa33566a22b.png"
@@ -38,9 +38,11 @@ function AccountPreview({ ...props }) {
                         <span className={cx('user-desc')}>Likes</span>
                     </p>
                 </div>
-            </PopperWrapper>
+            </PopperContainer>
         </div>
     );
 }
-
+// AccountPreview.propTypes = {
+//     ...props: PropTypes.string,
+// };
 export default AccountPreview;

@@ -1,6 +1,11 @@
-.wrapper {
+.container {
     width: 320px;
     padding: 16px;
+    background-color: var(--white);
+    padding: 20px;
+
+    box-shadow: rgb(0 0 0 / 12%) 0px 4px 16px;
+    border-radius: 8px;
 }
 .header {
     display: flex;

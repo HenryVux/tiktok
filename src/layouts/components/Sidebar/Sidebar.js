@@ -33,6 +33,7 @@ function Sidebar() {
                 />
                 <MenuItem title="LIVE" to={config.routes.live} icon={<LiveIcon />} activeIcon={<LiveIconActive />} />
             </Menu>
+            <div className={cx('xline')}></div>
             <SuggestedAccounts label="Suggested accounts" />
             {/* <SuggestedAccounts label="Following accounts" /> */}
         </aside>

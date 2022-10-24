@@ -8,6 +8,10 @@ function Wrapper({ children, className }) {
     return <div className={cx('wrapper', className)}>{children}</div>;
 }
 
+export function container({ children, className }) {
+    return <div className={className}>{children}</div>;
+}
+
 Wrapper.propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
